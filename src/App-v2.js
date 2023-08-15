@@ -218,24 +218,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     Genre: genre,
   } = movie;
 
-  // if (imdbRating > 8) [isTop, setIsTop] = useState(true);
-
-  // if (imdbRating > 8) return <p>Greates Ever!</p>;
-
-  // const [isTop, setIsTop] = useState(imdbRating > 9);
-  // console.log(isTop);
-  // useEffect(
-  //   function () {
-  //     setIsTop(imdbRating > 8);
-  //   },
-  //   [imdbRating]
-  // );
-
-  // const isTop = imdbRating > 8;
-  // console.log(isTop);
-
-  // const [averageRating, setAverageRating] = useState(0);
-
   function handleAdd() {
     const newWatchedMovie = {
       imdbID: selectedId,
@@ -248,9 +230,7 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
     };
 
     onAddWatched(newWatchedMovie);
-    // onCloseMovie();
-    // setAverageRating(Number(imdbRating));
-    // setAverageRating((x) => (x + userRating) / 2);
+    onCloseMovie();
   }
 
   useEffect(
@@ -321,8 +301,6 @@ function MovieDetails({ selectedId, onCloseMovie, onAddWatched, watched }) {
               </p>
             </div>
           </header>
-
-          {/* <p>{averageRating}</p> */}
 
           <section>
             <div className="rating">
